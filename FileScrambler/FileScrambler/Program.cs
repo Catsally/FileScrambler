@@ -8,11 +8,11 @@ namespace FileScrambler
     {
         static void Main(string[] args)
         {
+            int i;
             List<string> files;
             string[] filePath;
             string programDirectory;
             string verify;
-            int i;
 
             Console.WriteLine("Enter Directory to scramble (hit return to get program directory)");
             programDirectory = Console.ReadLine();
@@ -29,7 +29,7 @@ namespace FileScrambler
                 Console.WriteLine(files[i]);
             }
 
-            Console.Write("\n Continue? y/n: ");
+            Console.Write("\nContinue? y/n: ");
             verify = Console.ReadLine().ToUpper();
 
             if (verify == "Y")
@@ -69,19 +69,34 @@ namespace FileScrambler
 
             for (i = 0; i < Scrambledfiles.Count; i++)
             {
-                //
                 FileInfo FI = new FileInfo(filePath[i]);
                 string file = Scrambledfiles[i];
+                                
+                ext.Add(Path.GetExtension(filePath[i]));
 
                 int j = Scrambledfiles[i].LastIndexOf(".");
 
                 if (j != -1)
                 {
-                    file = Scrambledfiles[i].Substring(0, j);
+                    file = file.Substring(0, j);
                 }
 
                 FI.MoveTo(programDirectory + @"\" + file, true);
-                Console.WriteLine(programDirectory + @"\" + Scrambledfiles[i]);
+                Console.WriteLine(programDirectory + @"\" + file);
+            }
+
+            for (i = 0; i < files.Count; i++)
+            {
+                string file = Scrambledfiles[i];
+                int j = Scrambledfiles[i].LastIndexOf(".");
+
+                if (j != -1)
+                {
+                    file = file.Substring(0, j);
+                }
+
+                FileInfo FI = new FileInfo(programDirectory + @"\" + file);
+                FI.MoveTo(programDirectory + @"\" + file + ext[i],true);              
             }
             Console.ReadLine();
         }
