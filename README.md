@@ -9,6 +9,5 @@ note: It does work with the whole "switching names out" thing. but it also remov
 <br>
 
 <h1>ToDo</h1>
-<h5>- add restore file extensions so its actually "useful"</h5>
 <h5>- maybe add settings to only swap certain filetypes</h5>
 <h5>- rewrite the entire goddam thing so its not a janky mess</h5>
