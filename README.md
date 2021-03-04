@@ -6,6 +6,10 @@
 
 <br>
 
+<p>Note: it only swaps files not folders. </p>
+
+<br>
+
 <h1>ToDo</h1>
 <h5>- maybe add settings to only swap certain filetypes</h5>
 <h5>- rewrite the entire goddam thing so its not a janky mess</h5>
