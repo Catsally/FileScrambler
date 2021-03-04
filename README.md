@@ -6,7 +6,7 @@
 
 <br>
 
-<p>Note: it only swaps files not folders. </p>
+<p>Note: it only swaps file names in the exact directory you give it. it does not go into folders or swap the names of folders.</p>
 
 <br>
 
