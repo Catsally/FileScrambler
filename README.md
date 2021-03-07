@@ -6,10 +6,4 @@
 
 <br>
 
-<p>Note: it only swaps file names in the exact directory you give it. it does not go into folders or swap the names of folders.</p>
-
-<br>
-
-<h1>ToDo</h1>
-<h5>- maybe add settings to only swap certain filetypes</h5>
-<h5>- rewrite the entire goddam thing so its not a janky mess</h5>
+<p>Note: it only swaps file names in the given directory. it does not go into subfolders or at all modify the names of folders.</p>
